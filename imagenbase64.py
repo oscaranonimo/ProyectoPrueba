@@ -11,6 +11,7 @@ with open("base64prueba.txt") as f:
     pdftext = f.read()
 pdf = base64.b64decode(pdftext)
 stream = bytearray(pdf)
+print(str(stream))
 # doc = fitz.open(pdf, pdf)
 doc = fitz.open(pdf, stream)
 doc.save("test_pdf_bytes.pdf")
